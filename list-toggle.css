@@ -1,0 +1,258 @@
+button{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+
+}
+html{
+	margin: 0;
+	padding: 0;
+}
+.block-m{
+	margin-top: -80px;
+	height: 80px;
+	width: 400px;
+	background: white;
+	display: block;
+	position: relative;
+	top:0;
+}
+.block-m.ng-enter{
+	-webkit-transition:2s;
+	transition:2s;
+	top:80px;
+	margin-left: 400px;
+	background: black;
+}
+.block-m.ng-enter-active{
+	margin-left: 0px;
+	background: blue;
+
+}
+.block-m{
+	-webkit-transition:1s;
+	transition:1s;
+	margin-left: 0px;
+	background: white;
+}
+.block-m.disabled{
+	margin-left: -204px;
+	background: white;
+	box-shadow: 0px 0px 4px 6px #777;
+}
+.block-m-back{
+	height: 80px;
+	width: 400px;
+	background: #222;
+	display:block;
+}
+.block-m-back.ng-leave-active{
+}
+.block-m-back.ng-leave{
+	-webkit-transition: 2s;
+	transition:2s;
+}
+.tblockcontainer{
+	width: 400px;
+	height: 80px;
+	padding: 0px;
+	overflow: hidden;
+	margin-bottom: 2px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+}
+.tblock{
+	display: table;
+	overflow: visible;
+	margin-left: -20px;
+	width: 800px;
+	height: 80px;
+	padding: 0px;
+}
+ul{
+	padding: 0;
+	height: 80px;
+	margin: 0;
+}
+li{
+	float: left;
+	height: 80px;
+	width: 20px;
+	background: blue;
+}
+.li_red{
+	margin-left: 0px;
+	width: 20px;
+	background: red;
+}
+.li_red.reddelete{
+	animation-name: delaySlideRight;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+	-webkit-animation-name: delaySlideRight;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+	
+}
+@-webkit-keyframes delaySlideRight{
+	0%{width: 20px;
+		opacity: 1;
+	}
+	50%{
+		width: 20px;
+	}
+	75%{
+		width: 440px;
+		opacity: 1;
+	}
+	90%{
+		opacity: 0.4;
+		width: 440px;
+	}
+	100%{	
+		opacity: 0.4;
+		width: 440px;
+	}
+}
+@keyframes delaySlideRight{
+	0%{width: 20px;}
+	50%{
+		width: 20px;
+	}
+	75%{
+		width: 440px;
+		opacity: 1;
+	}
+	90%{
+		opacity: 0;
+		width: 440px;
+	}
+	100%{
+		opacity: 0;
+		width: 440px;
+	}
+}
+.li_red.greencomplete{
+	margin-left: -400px;
+	-webkit-transition:2s;
+	transition:2s;
+}
+
+.li_green{
+	background: green;
+}
+.li_green.greencomplete{
+	-webkit-transition:1s;
+	transition:1s;
+	width: 440px;
+	margin-left: 0px;
+}
+.block-m-red{
+	width: 20px;
+	height: 80px;
+	background: red;
+	float: left;
+}
+.block-m-container{
+	width: 400px;
+	height: 80px;
+	background: blue;
+}
+.block-m-container.greencomplete{
+	margin-left: -400px;
+	-webkit-transition:1s;
+	transition:1s;
+}
+.block-m-green{
+	width: 20px;
+	height: 80px;
+	background: green;
+}
+
+
+.block-m-text{
+	margin-left: 10px;
+	font-size: 20px;
+	float: left;
+	position: absolute;
+	top:25px;
+}
+.toggleButton{
+	height: 100%;
+	width: 100px;
+	background: #ccc;
+	border-style: none;
+	margin-top: -0px;
+	margin-left: 300px;
+}
+.toggleBlock{
+	overflow: hidden;
+	height: 80px;
+	width: 400px;
+	margin-bottom: 0;
+	border: 1px solid gray;
+	list-style: none;
+}
+.optionButton{
+	height: 100%;
+	width: 100px;
+	background: #ccc;
+	border-style: none;
+	margin-top: -0px;
+}
+.optionButton:nth-child(1){
+	margin-left: 199px;
+	margin-right: 1px;
+
+}
+
+
+.cloak{
+	width: 100%;
+	height: 100%;
+	background: #333;
+	display: block;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	opacity: 0.8;
+	
+}
+.alertContainer{
+	position: relative;
+	opacity: 1.0;
+	width: 400px;
+	height: 205px;
+	background: white;
+	margin: auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border-radius: 5px;
+}
+.alertInput{
+	width: 360px;
+	height: 40px;
+	margin: 20px;
+	outline: none;
+	font-size: 30px;
+	margin-bottom: 40px;
+	border-style: none;
+}
+.alertButton{
+	font-size: 27px;
+	border-style: none;
+	background: none;
+	margin: auto;
+	display: block;
+	text-align: center;
+	cursor: hand;
+}

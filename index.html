@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="listed">
+	<head>
+		<title>Listed</title>
+		<script type="text/javascript" src="angular-1.3-2.0/angular.min.js"></script>
+		<script type="text/javascript" src="angular-1.3-2.0/angular-animate.min.js"></script>
+		<script type="text/javascript" src="angular-1.3-2.0/angular-route.min.js"></script>
+		<script type="text/javascript" src="list-toggle.js"></script>
+		<script type="text/javascript" src="listed.js"></script>
+		<script type="text/javascript" src="drop-down.js"></script>
+		<link rel="stylesheet" href="list-toggle.css"/>
+		<link rel="stylesheet" href="listed.css"/>
+		<link rel="stylesheet" href="drop-down.css"/>
+	</head>
+	<body ng-controller="listedController">
+		
+		<div  data-ng-view="">aodifaodinfaoinsd</div>
+		<div class="toolbar">
+			<div class="adminNavigation">
+				<div class="adminNavigationLogo">Listed<button class="adminNavigationButton" ng-click="adminNav=!adminNav"><img class='adminNavigationButtonArrow' src='dropDrownButtonArrow.png'/></button></div>
+				<div class="adminNavigationDropDown" ng-if="adminNav">
+					<ul class="adminNavigationList">
+						<li></li>
+						<li>Log Out</li>
+					</ul>
+				</div>
+			</div>
+			<div class="listCategories">
+				<drop-down options="lists" droppable ></drop-down>
+			</div>
+			<div class="addControls">
+				<form ng-submit="submitToListed()">
+				<input class="addControlsTextfield" ng-model="addFilterTextfield" type="text"/>
+				<button class="addControlsButton "><img class="addControlsButtonGraphic" ng-src="{{addControlsButtonOptionsCurrent}}"/></button>
+			</form>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
